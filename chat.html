@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>dur ki baten — Chat</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="profile-top">
+        <img id="myAvatar" src="assets/default-avatar.png" class="avatar" />
+        <div>
+          <div id="myName">Loading...</div>
+          <div id="myEmail" class="muted"></div>
+        </div>
+        <button id="logoutBtn" title="Logout" class="logout-btn">Logout</button>
+      </div>
+
+      <div class="search">
+        <input id="searchUser" placeholder="Search (email / name)" />
+        <button id="searchBtn">Search</button>
+      </div>
+
+      <div id="searchResults" class="list"></div>
+
+      <hr/>
+
+      <div class="list-header">
+        <strong>Chats</strong>
+        <button id="newChatBtn" title="New Chat">+</button>
+      </div>
+      <div id="chatList" class="list"></div>
+    </aside>
+
+    <main class="chat-window">
+      <div class="chat-header">
+        <div>
+          <div id="chatWith" class="chat-with">Select a chat</div>
+          <div id="presence" class="muted">—</div>
+        </div>
+        <div class="chat-actions">
+          <button id="pinBtn" title="Pin/Unpin">📌</button>
+          <button id="archiveBtn" title="Archive">🗄️</button>
+          <button id="deleteChatBtn" title="Delete Chat">🗑️</button>
+        </div>
+      </div>
+
+      <div id="messages" class="messages"></div>
+
+      <div class="composer">
+        <button id="emojiBtn" title="Emoji">😊</button>
+        <input id="messageInput" placeholder="Type a message" autocomplete="off" />
+        <input id="fileInput" type="file" style="display:none" />
+        <button id="attachBtn" title="Attach">📎</button>
+        <button id="recordBtn" title="Record voice">🎤</button>
+        <button id="sendBtn">Send</button>
+      </div>
+    </main>
+  </div>
+
+  <audio id="notifSound" src="assets/notify.mp3" preload="auto"></audio>
+
+  <script src="js/crypto.js"></script>
+  <script src="js/chat.js"></script>
+  <img><!-- Inline SVG avatar (web) -->
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 24 24" aria-hidden="true">
+  <rect width="100%" height="100%" rx="12" fill="#E6F9EF"/>
+  <circle cx="12" cy="8" r="3.2" fill="#25D366"/>
+  <path d="M4 20c0-3.3 3.6-6 8-6s8 2.7 8 6" fill="#CFF4E1"/>
+</svg></img>
+</body>
+</html>
