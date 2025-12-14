@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>dur ki baten — Signup</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="auth-container">
+    <h2>dur ki baten — Signup</h2>
+    <form id="signupForm">
+      <input id="name" type="text" placeholder="Full name (optional)" />
+      <input id="email" type="email" placeholder="Email (Go-Deep ID)" required />
+      <input id="password" type="password" placeholder="Password" required />
+      <button type="submit">Signup</button>
+    </form>
+    <p>पहले से अकाउंट है? <a href="login.html">Login</a></p>
+    <div id="msg" class="msg"></div>
+  </div>
+
+  <script src="js/crypto.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>
